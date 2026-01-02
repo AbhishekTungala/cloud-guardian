@@ -23,14 +23,21 @@ export default function Landing() {
             {/* New Background Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-muted/30 text-muted-foreground text-[11px] font-medium mb-12 border border-border/40 backdrop-blur-sm">
               <Sparkles className="h-3 w-3" />
-              <span>New Background</span>
+              <span>Intelligent Cloud Operations Platform</span>
             </div>
 
             {/* Main headline */}
             <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold mb-10 leading-[1.1] tracking-tight text-foreground">
-              Minimal plasma waves<br />
-              that soothe the eyes
+              Automated Monitoring.<br />
+              Self-Healing Systems.<br />
+              <span className="text-muted-foreground">Zero Panic.</span>
             </h1>
+
+            {/* Subtext */}
+            <p className="text-[14px] md:text-[15px] text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed">
+              Let your infrastructure heal itself. Our AI-powered platform detects issues, 
+              diagnoses root causes, and applies fixes automatically—before your users notice.
+            </p>
 
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row items-center justify-center gap-3">
