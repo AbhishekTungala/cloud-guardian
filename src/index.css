@@ -1,129 +1,80 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
-
-/* Cloud Self-Heal Platform Design System
-   Theme: Purple & Indigo with Glassmorphism
-   All colors are HSL
-*/
-
 @layer base {
   :root {
-    /* Core purple/indigo theme */
-    --background: 240 20% 99%;
-    --foreground: 263 84% 8%;
+    /* Core Minimal Light Theme */
+    --background: 0 0% 100%;
+    --foreground: 240 10% 3.9%;
 
     --card: 0 0% 100%;
-    --card-foreground: 263 84% 8%;
+    --card-foreground: 240 10% 3.9%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 263 84% 8%;
+    --popover-foreground: 240 10% 3.9%;
 
-    --primary: 263 70% 50%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 240 5.9% 10%;
+    --primary-foreground: 0 0% 98%;
 
-    --secondary: 240 60% 98%;
-    --secondary-foreground: 263 70% 25%;
+    --secondary: 240 4.8% 95.9%;
+    --secondary-foreground: 240 5.9% 10%;
 
-    --muted: 240 20% 96%;
-    --muted-foreground: 263 15% 45%;
+    --muted: 240 4.8% 95.9%;
+    --muted-foreground: 240 3.8% 46.1%;
 
-    --accent: 245 80% 60%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 240 4.8% 95.9%;
+    --accent-foreground: 240 5.9% 10%;
 
-    --destructive: 0 84% 60%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 263 20% 92%;
-    --input: 263 20% 92%;
-    --ring: 263 70% 50%;
+    --border: 240 5.9% 90%;
+    --input: 240 5.9% 90%;
+    --ring: 240 5.9% 10%;
 
-    --radius: 0.5rem;
+    --radius: 2rem;
 
     /* Aurora/Plasma Effect Colors */
-    --aurora-1: 263 70% 50% / 0.15;
-    --aurora-2: 245 80% 60% / 0.15;
-    --aurora-3: 280 70% 50% / 0.15;
+    --aurora-1: 263 70% 50% / 0.12;
+    --aurora-2: 245 80% 60% / 0.12;
+    --aurora-3: 280 70% 50% / 0.12;
 
-    /* Sidebar - darker purple */
-    --sidebar-background: 263 50% 12%;
-    --sidebar-foreground: 240 20% 95%;
-    --sidebar-primary: 263 70% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 263 40% 20%;
-    --sidebar-accent-foreground: 240 20% 95%;
-    --sidebar-border: 263 40% 20%;
-    --sidebar-ring: 263 70% 60%;
-
-    /* Custom tokens for glassmorphism */
-    --glass-bg: 263 50% 98% / 0.5;
-    --glass-border: 263 50% 90% / 0.4;
-    --glass-shadow: 263 70% 30%;
-
-    /* Gradient tokens */
-    --gradient-start: 263 70% 50%;
-    --gradient-end: 245 80% 60%;
-
-    /* Status colors */
-    --status-pending: 240 10% 50%;
-    --status-progress: 45 93% 47%;
-    --status-done: 142 71% 45%;
-    --status-critical: 0 84% 60%;
-
-    /* Priority colors */
-    --priority-low: 142 71% 45%;
-    --priority-medium: 45 93% 47%;
-    --priority-high: 25 95% 53%;
-    --priority-critical: 0 84% 60%;
+    --glass-bg: 0 0% 100% / 0.1;
+    --glass-border: 0 0% 0% / 0.05;
   }
 
   .dark {
-    --background: 263 50% 4%;
-    --foreground: 240 20% 98%;
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 100%;
 
-    --card: 263 40% 8%;
-    --card-foreground: 240 20% 98%;
+    --card: 240 10% 3.9%;
+    --card-foreground: 0 0% 98%;
 
-    --popover: 263 40% 8%;
-    --popover-foreground: 240 20% 98%;
+    --popover: 240 10% 3.9%;
+    --popover-foreground: 0 0% 98%;
 
-    --primary: 263 70% 60%;
-    --primary-foreground: 0 0% 100%;
+    --primary: 0 0% 98%;
+    --primary-foreground: 240 5.9% 10%;
 
-    --secondary: 263 40% 12%;
-    --secondary-foreground: 240 20% 95%;
+    --secondary: 240 3.7% 15.9%;
+    --secondary-foreground: 0 0% 98%;
 
-    --muted: 263 40% 12%;
-    --muted-foreground: 263 15% 65%;
+    --muted: 240 3.7% 15.9%;
+    --muted-foreground: 240 5% 64.9%;
 
-    --accent: 245 80% 65%;
-    --accent-foreground: 0 0% 100%;
+    --accent: 240 3.7% 15.9%;
+    --accent-foreground: 0 0% 98%;
 
-    --destructive: 0 62% 45%;
-    --destructive-foreground: 0 0% 100%;
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 0 0% 98%;
 
-    --border: 263 30% 15%;
-    --input: 263 30% 15%;
-    --ring: 263 70% 60%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
 
-    --aurora-1: 263 70% 60% / 0.15;
-    --aurora-2: 245 80% 65% / 0.15;
-    --aurora-3: 280 70% 60% / 0.15;
+    --aurora-1: 263 70% 60% / 0.12;
+    --aurora-2: 245 80% 65% / 0.12;
+    --aurora-3: 280 70% 60% / 0.12;
 
-    /* Sidebar */
-    --sidebar-background: 263 50% 6%;
-    --sidebar-foreground: 240 20% 95%;
-    --sidebar-primary: 263 70% 60%;
-    --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 263 40% 12%;
-    --sidebar-accent-foreground: 240 20% 95%;
-    --sidebar-border: 263 40% 12%;
-    --sidebar-ring: 263 70% 60%;
-
-    /* Glass for dark mode */
-    --glass-bg: 263 40% 10% / 0.6;
-    --glass-border: 263 40% 20% / 0.4;
-    --glass-shadow: 263 70% 5%;
+    --glass-bg: 0 0% 0% / 0.2;
+    --glass-border: 0 0% 100% / 0.1;
   }
 }
 
@@ -135,6 +86,7 @@
   body {
     @apply bg-background text-foreground antialiased;
     font-feature-settings: "cv02", "cv03", "cv04", "cv11";
+    font-family: 'Inter', system-ui, -apple-system, sans-serif;
   }
 }
 
@@ -145,38 +97,25 @@
   }
 
   .aurora {
-    @apply absolute -inset-[100%] opacity-50;
+    @apply absolute -inset-[100%] opacity-100;
     background: radial-gradient(circle at 50% 50%, 
       hsl(var(--aurora-1)), 
       hsl(var(--aurora-2)), 
       hsl(var(--aurora-3)));
-    filter: blur(80px);
-    animation: aurora-move 20s infinite linear;
+    filter: blur(100px);
+    animation: aurora-move 25s infinite linear;
   }
 
   @keyframes aurora-move {
-    0% { transform: rotate(0deg) scale(1.5) translate(5%, 5%); }
-    33% { transform: rotate(120deg) scale(1.8) translate(-5%, 10%); }
-    66% { transform: rotate(240deg) scale(1.5) translate(10%, -5%); }
-    100% { transform: rotate(360deg) scale(1.5) translate(5%, 5%); }
+    0% { transform: rotate(0deg) scale(1.5) translate(2%, 2%); }
+    50% { transform: rotate(180deg) scale(2) translate(-2%, 5%); }
+    100% { transform: rotate(360deg) scale(1.5) translate(2%, 2%); }
   }
 
   /* Glassmorphism card */
   .glass-card {
-    @apply backdrop-blur-md border;
+    @apply backdrop-blur-xl border;
     background: hsl(var(--glass-bg));
     border-color: hsl(var(--glass-border));
-    box-shadow: 
-      0 4px 24px -1px hsl(var(--glass-shadow) / 0.05);
-  }
-
-  /* Gradient background */
-  .gradient-bg {
-    background: linear-gradient(
-      135deg,
-      hsl(var(--gradient-start)) 0%,
-      hsl(var(--gradient-end)) 100%
-    );
   }
 }
-
