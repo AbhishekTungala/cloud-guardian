@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 @layer base {
   :root {
     /* Core Minimal Light Theme */
@@ -119,3 +123,4 @@
     border-color: hsl(var(--glass-border));
   }
 }
+
