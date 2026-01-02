@@ -6,6 +6,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Navbar } from "@/components/layout/Navbar";
 import { Footer } from "@/components/layout/Footer";
 import { ThemeProvider } from "@/components/theme-provider";
+import Plasma from "@/components/background/Plasma";
 import Landing from "./pages/Landing";
 import Dashboard from "./pages/Dashboard";
 import Admin from "./pages/Admin";
@@ -18,8 +19,15 @@ const App = () => (
   <QueryClientProvider client={queryClient}>
     <ThemeProvider defaultTheme="dark" storageKey="vite-ui-theme">
       <TooltipProvider>
-        <div className="aurora-container">
-          <div className="aurora" />
+        <div className="fixed inset-0 -z-10 pointer-events-none">
+          <Plasma 
+            color="#ff6b35"
+            speed={0.6}
+            direction="forward"
+            scale={1.1}
+            opacity={0.8}
+            mouseInteractive={true}
+          />
         </div>
         <Toaster />
         <Sonner />
