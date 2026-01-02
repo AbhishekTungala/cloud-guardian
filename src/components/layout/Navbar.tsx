@@ -8,7 +8,7 @@ import { useTheme } from '@/components/theme-provider';
 const navLinks = [
   { href: '/', label: 'Home' },
   { href: '/dashboard', label: 'Dashboard' },
-  { href: '/admin', label: 'Admin' },
+  { href: '/admin', label: 'Admin (locked)' },
   { href: '/health', label: 'Health' },
 ];
 

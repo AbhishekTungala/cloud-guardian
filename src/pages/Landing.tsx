@@ -23,7 +23,7 @@ export default function Landing() {
             {/* New Background Badge */}
             <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-muted/30 text-muted-foreground text-[11px] font-medium mb-12 border border-border/40 backdrop-blur-sm">
               <Sparkles className="h-3 w-3" />
-              <span>Intelligent Cloud Operations Platform</span>
+              <span>Cloud Self-Heal Platform</span>
             </div>
 
             {/* Main headline */}
@@ -32,16 +32,16 @@ export default function Landing() {
                 Automated Monitoring.
               </h1>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-[1.1] tracking-tight text-foreground">
-                Self-Healing Systems.
+                Self-Healing Infrastructure.
               </h1>
               <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-[1.1] tracking-tight text-muted-foreground">
-                Zero Panic.
+                Less Stress.
               </h1>
             </div>
 
             {/* Subtext */}
             <p className="text-[14px] md:text-[15px] text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed">
-              “Let your infrastructure take care of itself. This platform automatically detects failures, applies safe fixes, and keeps services stable while providing full visibility and control — without hype or magic.”
+              “This project demonstrates how cloud systems can detect failures, attempt safe fixes automatically, and provide visibility for engineers — without manual intervention.”
             </p>
 
             {/* CTA Buttons */}

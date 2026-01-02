@@ -62,11 +62,11 @@ export default function Health() {
             </div>
 
             <h1 className="text-2xl font-bold mb-2">
-              {allOperational ? 'All Systems Operational' : 'Some Systems Degraded'}
+              System Health (Demo)
             </h1>
             
             <p className="text-muted-foreground mb-6">
-              Last checked: {lastChecked.toLocaleTimeString()}
+              All systems operational — demo values only.
             </p>
 
             <Button
@@ -117,8 +117,11 @@ export default function Health() {
 
           {/* Info card */}
           <GlassCard className="text-center py-6">
-            <p className="text-sm text-muted-foreground">
-              This page will be connected to real backend health checks once authentication is enabled.
+            <p className="text-sm text-muted-foreground mb-2">
+              This page will connect to real backend health checks later.
+            </p>
+            <p className="text-xs text-muted-foreground/60 italic">
+              This data is simulated for now.
             </p>
           </GlassCard>
         </div>

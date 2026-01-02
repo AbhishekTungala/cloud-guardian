@@ -60,7 +60,7 @@ export default function Dashboard() {
             <div>
               <h1 className="text-2xl font-bold">Dashboard</h1>
               <p className="text-muted-foreground">
-                Manage tasks and monitor system health
+                Manage tasks and prepare automation features that we will integrate later.
               </p>
             </div>
             <Dialog open={dialogOpen} onOpenChange={setDialogOpen}>
@@ -148,12 +148,12 @@ export default function Dashboard() {
                 <PlaceholderSection
                   icon="AlertTriangle"
                   title="Incidents"
-                  description="Incident monitoring coming soon"
+                  description="Incident tracking will be added after backend integration."
                 />
                 <PlaceholderSection
                   icon="History"
                   title="Auto-Fix History"
-                  description="Resolution timeline coming soon"
+                  description="This will display resolved events once automation is enabled."
                 />
               </div>
             </div>
@@ -165,7 +165,7 @@ export default function Dashboard() {
               <PlaceholderSection
                 icon="Activity"
                 title="System Health"
-                description="Health metrics coming soon"
+                description="Health metrics integration coming soon."
                 showStatus
               />
             </div>

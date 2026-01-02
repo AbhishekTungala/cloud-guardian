@@ -1,0 +1,145 @@
+Update the app content so it reflects a practical engineering demo instead of a commercial AI product.
+
+Do NOT change layout, styles, animations, or color theme. Only change text, headings, labels, and descriptions.
+
+Overall tone:
+Clear, engineering-focused, realistic. No hype, no “AI-powered”, no marketing buzzwords.
+
+Navbar (update)
+
+Replace with:
+
+Home
+Dashboard
+Admin (locked placeholder)
+Health
+Toggle Theme
+Sign In (placeholder only)
+Get Started (primary CTA)
+
+Keep the same design — only text.
+
+Landing Page (update text only)
+
+Title:
+Cloud Self-Heal Platform
+
+Subheadline lines:
+Automated Monitoring.
+Self-Healing Infrastructure.
+Less Stress.
+
+Description:
+“This project demonstrates how cloud systems can detect failures, attempt safe fixes automatically, and provide visibility for engineers — without manual intervention.”
+
+Buttons stay:
+Get Started
+Learn More
+
+Dashboard Page (simplify + align with tasks concept)
+
+Top heading:
+Dashboard
+Subtext:
+“Manage tasks and prepare automation features that we will integrate later.”
+
+Task list examples:
+
+Task #1
+Title: Configure monitoring alerts
+Status: In Progress
+Description: “Create alert rules for CPU, memory, disk, and HTTP errors.”
+
+Task #2
+Title: Add auto-fix scripts
+Status: Pending
+Description: “Set up basic remediation scripts (restart service, clean disk, scale up).”
+
+Task #3
+Title: Deploy health endpoints
+Status: Pending
+Description: “Expose /health and /ready endpoints for backend services.”
+
+Task #4
+Title: Update documentation
+Status: Done
+Description: “Explain how monitoring and auto-healing work in this project.”
+
+Side panel placeholders:
+
+Incidents:
+“Incident tracking will be added after backend integration.”
+
+Auto-Fix History:
+“This will display resolved events once automation is enabled.”
+
+Recent Activity:
+Keep timeline, but change items to realistic learning actions:
+• Created initial tasks
+• Updated monitoring task
+• Added placeholder health page
+
+System Health card:
+“Health metrics integration coming soon.”
+
+Status text:
+“All systems running in demo mode.”
+
+Sidebar (simplify names)
+
+Use:
+
+Overview
+Tasks
+Incidents (locked)
+Health
+Auto-Fix History (locked)
+Admin (locked)
+
+Admin Page (change tone)
+
+Title:
+Admin Area — Coming Soon
+
+Description:
+“This section will include configuration tools, incident logs, cost insights, and automation controls once authentication is implemented.”
+
+Cards:
+
+Monitoring (placeholder)
+Incident Logs (placeholder)
+Cost Insights (placeholder)
+
+Button:
+“Notify me when ready” (non-functional)
+
+Health Page (make it honest)
+
+Title:
+System Health (Demo)
+
+Status:
+“All systems operational — demo values only.”
+
+Text beneath:
+“This page will connect to real backend health checks later.”
+
+Keep example services:
+
+API Gateway — operational
+Database — operational
+Core Services — operational
+
+Add note at bottom:
+“This data is simulated for now.”
+
+Important
+
+Do NOT:
+
+• mention AI
+• oversell features
+• add real authentication
+• change layout or components
+
+Only rewrite content so it clearly supports a learning / engineering demo that we will extend later.

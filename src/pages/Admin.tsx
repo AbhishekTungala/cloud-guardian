@@ -14,29 +14,28 @@ export default function Admin() {
             </div>
 
             {/* Title */}
-            <h1 className="text-2xl font-bold mb-3">Admin Area Coming Soon</h1>
+            <h1 className="text-2xl font-bold mb-3">Admin Area — Coming Soon</h1>
             
             {/* Description */}
             <p className="text-muted-foreground max-w-md mx-auto mb-8">
-              Advanced monitoring, incident logs, cost insights, and system configuration 
-              will be available here once you're authenticated.
+              This section will include configuration tools, incident logs, cost insights, and automation controls once authentication is implemented.
             </p>
 
             {/* Features preview */}
             <div className="grid sm:grid-cols-3 gap-4 mb-8">
               <div className="p-4 rounded-lg bg-muted/50">
                 <Settings className="h-6 w-6 mx-auto mb-2 text-primary" />
-                <p className="text-sm font-medium">Monitoring</p>
+                <p className="text-sm font-medium">Monitoring (placeholder)</p>
               </div>
               <div className="p-4 rounded-lg bg-muted/50">
                 <Bell className="h-6 w-6 mx-auto mb-2 text-primary" />
-                <p className="text-sm font-medium">Incident Logs</p>
+                <p className="text-sm font-medium">Incident Logs (placeholder)</p>
               </div>
               <div className="p-4 rounded-lg bg-muted/50">
                 <svg className="h-6 w-6 mx-auto mb-2 text-primary" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
                   <path d="M12 2v20M17 5H9.5a3.5 3.5 0 0 0 0 7h5a3.5 3.5 0 0 1 0 7H6" />
                 </svg>
-                <p className="text-sm font-medium">Cost Insights</p>
+                <p className="text-sm font-medium">Cost Insights (placeholder)</p>
               </div>
             </div>
 
