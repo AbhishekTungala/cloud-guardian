@@ -10,10 +10,16 @@ interface ServiceStatus {
   status: 'operational' | 'degraded' | 'down';
 }
 
+const statusColors = {
+  operational: 'text-status-done bg-status-done/10',
+  degraded: 'text-status-progress bg-status-progress/10',
+  down: 'text-status-critical bg-status-critical/10',
+};
+
 const services: ServiceStatus[] = [
-  { name: 'API Gateway', icon: Globe, status: 'operational' },
-  { name: 'Database', icon: Database, status: 'operational' },
-  { name: 'Core Services', icon: Server, status: 'operational' },
+  { name: 'API Gateway — operational', icon: Globe, status: 'operational' },
+  { name: 'Database — operational', icon: Database, status: 'operational' },
+  { name: 'Core Services — operational', icon: Server, status: 'operational' },
 ];
 
 export default function Health() {
@@ -37,19 +43,9 @@ export default function Health() {
     return () => clearInterval(interval);
   }, []);
 
-const statusColors = {
-  operational: 'text-status-done bg-status-done/10',
-  degraded: 'text-status-progress bg-status-progress/10',
-  down: 'text-status-critical bg-status-critical/10',
-};
+  const allOperational = services.every(s => s.status === 'operational');
 
-const services: ServiceStatus[] = [
-  { name: 'API Gateway — operational', icon: Globe, status: 'operational' },
-  { name: 'Database — operational', icon: Database, status: 'operational' },
-  { name: 'Core Services — operational', icon: Server, status: 'operational' },
-];
-
-export default function Health() {
+  return (
     <div className="min-h-screen pt-20 pb-12 page-enter">
       <div className="container mx-auto px-4">
         <div className="max-w-2xl mx-auto space-y-6">
