@@ -10,23 +10,23 @@
 @layer base {
   :root {
     /* Core purple/indigo theme */
-    --background: 240 20% 98%;
-    --foreground: 263 84% 12%;
+    --background: 240 20% 99%;
+    --foreground: 263 84% 8%;
 
     --card: 0 0% 100%;
-    --card-foreground: 263 84% 12%;
+    --card-foreground: 263 84% 8%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 263 84% 12%;
+    --popover-foreground: 263 84% 8%;
 
     --primary: 263 70% 50%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 240 60% 96%;
-    --secondary-foreground: 263 70% 30%;
+    --secondary: 240 60% 98%;
+    --secondary-foreground: 263 70% 25%;
 
-    --muted: 240 20% 94%;
-    --muted-foreground: 263 20% 45%;
+    --muted: 240 20% 96%;
+    --muted-foreground: 263 15% 45%;
 
     --accent: 245 80% 60%;
     --accent-foreground: 0 0% 100%;
@@ -34,11 +34,16 @@
     --destructive: 0 84% 60%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 263 30% 88%;
-    --input: 263 30% 88%;
+    --border: 263 20% 92%;
+    --input: 263 20% 92%;
     --ring: 263 70% 50%;
 
-    --radius: 0.75rem;
+    --radius: 0.5rem;
+
+    /* Aurora/Plasma Effect Colors */
+    --aurora-1: 263 70% 50% / 0.15;
+    --aurora-2: 245 80% 60% / 0.15;
+    --aurora-3: 280 70% 50% / 0.15;
 
     /* Sidebar - darker purple */
     --sidebar-background: 263 50% 12%;
@@ -51,8 +56,8 @@
     --sidebar-ring: 263 70% 60%;
 
     /* Custom tokens for glassmorphism */
-    --glass-bg: 263 50% 98% / 0.7;
-    --glass-border: 263 50% 90% / 0.5;
+    --glass-bg: 263 50% 98% / 0.5;
+    --glass-border: 263 50% 90% / 0.4;
     --glass-shadow: 263 70% 30%;
 
     /* Gradient tokens */
@@ -73,48 +78,52 @@
   }
 
   .dark {
-    --background: 263 50% 6%;
-    --foreground: 240 20% 95%;
+    --background: 263 50% 4%;
+    --foreground: 240 20% 98%;
 
-    --card: 263 40% 10%;
-    --card-foreground: 240 20% 95%;
+    --card: 263 40% 8%;
+    --card-foreground: 240 20% 98%;
 
-    --popover: 263 40% 10%;
-    --popover-foreground: 240 20% 95%;
+    --popover: 263 40% 8%;
+    --popover-foreground: 240 20% 98%;
 
     --primary: 263 70% 60%;
     --primary-foreground: 0 0% 100%;
 
-    --secondary: 263 40% 15%;
-    --secondary-foreground: 240 20% 90%;
+    --secondary: 263 40% 12%;
+    --secondary-foreground: 240 20% 95%;
 
-    --muted: 263 40% 15%;
-    --muted-foreground: 263 20% 60%;
+    --muted: 263 40% 12%;
+    --muted-foreground: 263 15% 65%;
 
     --accent: 245 80% 65%;
     --accent-foreground: 0 0% 100%;
 
-    --destructive: 0 62% 40%;
+    --destructive: 0 62% 45%;
     --destructive-foreground: 0 0% 100%;
 
-    --border: 263 40% 18%;
-    --input: 263 40% 18%;
+    --border: 263 30% 15%;
+    --input: 263 30% 15%;
     --ring: 263 70% 60%;
 
+    --aurora-1: 263 70% 60% / 0.15;
+    --aurora-2: 245 80% 65% / 0.15;
+    --aurora-3: 280 70% 60% / 0.15;
+
     /* Sidebar */
-    --sidebar-background: 263 50% 8%;
+    --sidebar-background: 263 50% 6%;
     --sidebar-foreground: 240 20% 95%;
     --sidebar-primary: 263 70% 60%;
     --sidebar-primary-foreground: 0 0% 100%;
-    --sidebar-accent: 263 40% 15%;
+    --sidebar-accent: 263 40% 12%;
     --sidebar-accent-foreground: 240 20% 95%;
-    --sidebar-border: 263 40% 15%;
+    --sidebar-border: 263 40% 12%;
     --sidebar-ring: 263 70% 60%;
 
     /* Glass for dark mode */
-    --glass-bg: 263 40% 12% / 0.8;
-    --glass-border: 263 40% 25% / 0.5;
-    --glass-shadow: 263 70% 10%;
+    --glass-bg: 263 40% 10% / 0.6;
+    --glass-border: 263 40% 20% / 0.4;
+    --glass-shadow: 263 70% 5%;
   }
 }
 
@@ -125,18 +134,40 @@
 
   body {
     @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11";
   }
 }
 
 @layer components {
+  /* Aurora Background */
+  .aurora-container {
+    @apply fixed inset-0 -z-10 overflow-hidden pointer-events-none bg-background;
+  }
+
+  .aurora {
+    @apply absolute -inset-[100%] opacity-50;
+    background: radial-gradient(circle at 50% 50%, 
+      hsl(var(--aurora-1)), 
+      hsl(var(--aurora-2)), 
+      hsl(var(--aurora-3)));
+    filter: blur(80px);
+    animation: aurora-move 20s infinite linear;
+  }
+
+  @keyframes aurora-move {
+    0% { transform: rotate(0deg) scale(1.5) translate(5%, 5%); }
+    33% { transform: rotate(120deg) scale(1.8) translate(-5%, 10%); }
+    66% { transform: rotate(240deg) scale(1.5) translate(10%, -5%); }
+    100% { transform: rotate(360deg) scale(1.5) translate(5%, 5%); }
+  }
+
   /* Glassmorphism card */
   .glass-card {
-    @apply backdrop-blur-xl rounded-xl border;
+    @apply backdrop-blur-md border;
     background: hsl(var(--glass-bg));
     border-color: hsl(var(--glass-border));
     box-shadow: 
-      0 8px 32px -8px hsl(var(--glass-shadow) / 0.15),
-      0 0 0 1px hsl(var(--glass-border));
+      0 4px 24px -1px hsl(var(--glass-shadow) / 0.05);
   }
 
   /* Gradient background */
@@ -147,105 +178,5 @@
       hsl(var(--gradient-end)) 100%
     );
   }
-
-  /* Animated gradient background */
-  .animated-gradient-bg {
-    background: linear-gradient(
-      135deg,
-      hsl(var(--gradient-start)) 0%,
-      hsl(var(--gradient-end)) 50%,
-      hsl(var(--gradient-start)) 100%
-    );
-    background-size: 200% 200%;
-    animation: gradientShift 8s ease infinite;
-  }
-
-  @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
-  }
-
-  /* Floating animation */
-  .float {
-    animation: float 6s ease-in-out infinite;
-  }
-
-  @keyframes float {
-    0%, 100% { transform: translateY(0px); }
-    50% { transform: translateY(-20px); }
-  }
-
-  /* Glow effect */
-  .glow {
-    box-shadow: 
-      0 0 20px hsl(var(--primary) / 0.3),
-      0 0 40px hsl(var(--primary) / 0.2),
-      0 0 60px hsl(var(--primary) / 0.1);
-  }
-
-  /* Status badges */
-  .status-pending {
-    @apply bg-muted text-muted-foreground;
-  }
-
-  .status-in-progress {
-    background: hsl(var(--status-progress) / 0.15);
-    color: hsl(var(--status-progress));
-  }
-
-  .status-done {
-    background: hsl(var(--status-done) / 0.15);
-    color: hsl(var(--status-done));
-  }
-
-  /* Priority indicators */
-  .priority-low {
-    background: hsl(var(--priority-low));
-  }
-
-  .priority-medium {
-    background: hsl(var(--priority-medium));
-  }
-
-  .priority-high {
-    background: hsl(var(--priority-high));
-  }
-
-  .priority-critical {
-    background: hsl(var(--priority-critical));
-  }
-
-  /* Skeleton loader animation */
-  .skeleton-shimmer {
-    background: linear-gradient(
-      90deg,
-      hsl(var(--muted)) 0%,
-      hsl(var(--muted-foreground) / 0.1) 50%,
-      hsl(var(--muted)) 100%
-    );
-    background-size: 200% 100%;
-    animation: shimmer 1.5s infinite;
-  }
-
-  @keyframes shimmer {
-    0% { background-position: 200% 0; }
-    100% { background-position: -200% 0; }
-  }
-
-  /* Page transition */
-  .page-enter {
-    animation: pageEnter 0.3s ease-out;
-  }
-
-  @keyframes pageEnter {
-    from {
-      opacity: 0;
-      transform: translateY(10px);
-    }
-    to {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  }
 }
+
