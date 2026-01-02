@@ -27,16 +27,21 @@ export default function Landing() {
             </div>
 
             {/* Main headline */}
-            <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold mb-10 leading-[1.1] tracking-tight text-foreground">
-              Automated Monitoring.<br />
-              Self-Healing Systems.<br />
-              <span className="text-muted-foreground">Zero Panic.</span>
-            </h1>
+            <div className="flex flex-col gap-2 mb-10">
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-[1.1] tracking-tight text-foreground">
+                Automated Monitoring.
+              </h1>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-[1.1] tracking-tight text-foreground">
+                Self-Healing Systems.
+              </h1>
+              <h1 className="text-4xl sm:text-5xl md:text-6xl font-semibold leading-[1.1] tracking-tight text-muted-foreground">
+                Zero Panic.
+              </h1>
+            </div>
 
             {/* Subtext */}
             <p className="text-[14px] md:text-[15px] text-muted-foreground max-w-xl mx-auto mb-10 leading-relaxed">
-              Let your infrastructure heal itself. Our AI-powered platform detects issues, 
-              diagnoses root causes, and applies fixes automatically—before your users notice.
+              “Let your infrastructure take care of itself. This platform automatically detects failures, applies safe fixes, and keeps services stable while providing full visibility and control — without hype or magic.”
             </p>
 
             {/* CTA Buttons */}
@@ -44,6 +49,7 @@ export default function Landing() {
               <Button 
                 size="sm" 
                 className="bg-foreground text-background hover:bg-foreground/90 text-[13px] px-8 h-10 rounded-full font-medium"
+                data-testid="button-get-started"
               >
                 Get Started
               </Button>
@@ -52,6 +58,7 @@ export default function Landing() {
                 size="sm" 
                 variant="outline"
                 className="bg-muted/10 border-border/40 text-muted-foreground hover:text-foreground text-[13px] px-8 h-10 rounded-full font-medium backdrop-blur-sm"
+                data-testid="button-learn-more"
               >
                 Learn More
               </Button>
