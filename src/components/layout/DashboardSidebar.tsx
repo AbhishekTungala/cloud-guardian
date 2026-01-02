@@ -27,10 +27,10 @@ interface NavItem {
 const navItems: NavItem[] = [
   { icon: LayoutDashboard, label: 'Overview', href: '/dashboard' },
   { icon: ListTodo, label: 'Tasks', href: '/dashboard', badge: 'Active' },
-  { icon: AlertTriangle, label: 'Incidents', href: '/dashboard', disabled: true },
+  { icon: AlertTriangle, label: 'Incidents (locked)', href: '/dashboard', disabled: true },
   { icon: Activity, label: 'Health', href: '/health' },
-  { icon: History, label: 'Auto-Fix History', href: '/dashboard', disabled: true },
-  { icon: Settings, label: 'Admin', href: '/admin', disabled: true },
+  { icon: History, label: 'Auto-Fix History (locked)', href: '/dashboard', disabled: true },
+  { icon: Settings, label: 'Admin (locked)', href: '/admin', disabled: true },
 ];
 
 export function DashboardSidebar() {
@@ -135,7 +135,7 @@ export function DashboardSidebar() {
         {!collapsed ? (
           <div className="glass-card p-3 text-center">
             <p className="text-xs text-muted-foreground">
-              Backend ready for integration
+              All systems running in demo mode.
             </p>
           </div>
         ) : (

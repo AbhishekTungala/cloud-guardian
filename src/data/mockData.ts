@@ -26,7 +26,7 @@ export const initialTasks: Task[] = [
   {
     id: '1',
     title: 'Configure monitoring alerts',
-    description: 'Set up real-time monitoring alerts for critical system metrics',
+    description: 'Create alert rules for CPU, memory, disk, and HTTP errors.',
     priority: 'high',
     status: 'in-progress',
     createdAt: new Date(Date.now() - 86400000 * 2),
@@ -34,8 +34,8 @@ export const initialTasks: Task[] = [
   },
   {
     id: '2',
-    title: 'Review auto-fix policies',
-    description: 'Audit and update automated incident resolution policies',
+    title: 'Add auto-fix scripts',
+    description: 'Set up basic remediation scripts (restart service, clean disk, scale up).',
     priority: 'medium',
     status: 'pending',
     createdAt: new Date(Date.now() - 86400000),
@@ -43,8 +43,8 @@ export const initialTasks: Task[] = [
   },
   {
     id: '3',
-    title: 'Deploy health check endpoints',
-    description: 'Implement /health and /ready endpoints for all microservices',
+    title: 'Deploy health endpoints',
+    description: 'Expose /health and /ready endpoints for backend services.',
     priority: 'critical',
     status: 'pending',
     createdAt: new Date(Date.now() - 43200000),
@@ -53,7 +53,7 @@ export const initialTasks: Task[] = [
   {
     id: '4',
     title: 'Update documentation',
-    description: 'Document the new self-healing workflow procedures',
+    description: 'Explain how monitoring and auto-healing work in this project.',
     priority: 'low',
     status: 'done',
     createdAt: new Date(Date.now() - 86400000 * 3),
@@ -65,27 +65,21 @@ export const initialTasks: Task[] = [
 export const mockActivity: ActivityItem[] = [
   {
     id: 'a1',
-    type: 'task_completed',
-    message: 'Documentation update completed',
+    type: 'task_created',
+    message: 'Created initial tasks',
     timestamp: new Date(Date.now() - 86400000),
   },
   {
     id: 'a2',
     type: 'task_updated',
-    message: 'Monitoring alerts task moved to In Progress',
+    message: 'Updated monitoring task',
     timestamp: new Date(Date.now() - 3600000),
   },
   {
     id: 'a3',
     type: 'system',
-    message: 'System health check passed',
+    message: 'Added placeholder health page',
     timestamp: new Date(Date.now() - 7200000),
-  },
-  {
-    id: 'a4',
-    type: 'incident',
-    message: 'Minor latency spike detected and auto-resolved',
-    timestamp: new Date(Date.now() - 14400000),
   },
 ];
 
